@@ -1,0 +1,117 @@
+@import "./scss/reusable.scss";
+@import "./scss/flex.scss";
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  // -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-color: black;
+  scrollbar-width: thin;
+  cursor: default;
+  // overflow: hidden;
+}
+
+[class*="fx-"] {
+  @include display-flex();
+  &[class*="row"] {
+    @include flex-direction(row);
+  }
+  &[class*="row-wrap"] {
+    @include flex-flow(row, wrap);
+  }
+  &[class*="column"] {
+    @include flex-direction(column);
+  }
+  &.fx-grow {
+    @include flex-grow(1);
+  }
+  &.fx-no-grow {
+    @include flex-grow(0);
+  }
+  &.fx-shrink {
+    @include flex-shrink(1);
+  }
+  &.fx-no-shrink {
+    @include flex-shrink(0);
+  }
+  &.fx-start-start {
+    @include flex-position(flex-start, flex-start);
+  }
+  &.fx-start-center {
+    @include flex-position(center, flex-start);
+  }
+  &.fx-start-end {
+    @include flex-position(flex-end, flex-start);
+  }
+  &.fx-start-stretch {
+    @include flex-position(stretch, flex-start);
+  }
+  &.fx-center-start {
+    @include flex-position(flex-start, center);
+  }
+  &.fx-center-center {
+    @include flex-position(center, center);
+  }
+  &.fx-center-stretch {
+    @include flex-position(stretch, center);
+  }
+  &.fx-end-start {
+    @include flex-position(flex-start, flex-end);
+  }
+  &.fx-end-center {
+    @include flex-position(center, flex-end);
+  }
+  &.fx-end-end {
+    @include flex-position(flex-end, flex-end);
+  }
+  &.fx-end-stretch {
+    @include flex-position(stretch, flex-end);
+  }
+  &.fx-space-around-start {
+    @include flex-position(flex-start, space-around);
+  }
+  &.fx-space-around-center {
+    @include flex-position(center, space-around);
+  }
+  &.fx-space-around-end {
+    @include flex-position(flex-end, space-around);
+  }
+  &.fx-space-around-stretch {
+    @include flex-position(stretch, space-around);
+  }
+  &.fx-space-between-start {
+    @include flex-position(flex-start, space-between);
+  }
+  &.fx-space-between-center {
+    @include flex-position(center, space-between);
+  }
+  &.fx-space-between-end {
+    @include flex-position(flex-end, space-between);
+  }
+  &.fx-space-between-stretch {
+    @include flex-position(stretch, space-between);
+  }
+  &.fx-space-evenly-start {
+    @include flex-position(flex-start, space-evenly);
+  }
+  &.fx-space-evenly-center {
+    @include flex-position(center, space-evenly);
+  }
+  &.fx-space-evenly-end {
+    @include flex-position(flex-end, space-evenly);
+  }
+  &.fx-space-evenly-stretch {
+    @include flex-position(stretch, space-evenly);
+  }
+  &.fx-fill {
+    @extend %fx-fill;
+  }
+  &.fx-5 {
+  }
+}

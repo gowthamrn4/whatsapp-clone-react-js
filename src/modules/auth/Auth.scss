@@ -1,0 +1,25 @@
+@import "../../scss/reusable.scss";
+
+.tes {
+  color: $mode-primary;
+}
+.container{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  background-image: linear-gradient(#00bf8f, #001510);
+  background-size:cover;
+
+}
+
+.form{
+  align-self: center;
+  padding: 3rem;
+  backdrop-filter: blur(2px);
+  background:rgba(255,255,255,0.2)
+}
+.loginBtn{
+  width: 100%;
+  margin: 5px 0px;
+  padding: 10px 0px;
+}
